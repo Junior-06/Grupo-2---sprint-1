@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador Financeira | Thiago Sanchez</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+
+        <nav>
+            <a class="logo" href="/">AirSense</a>
+            <ul class="nav-list">
+                <li><a href="/">Início</a></li>
+                <li><a href="/">Simulador Financeira</a></li>
+                <li><a href="/">Sobre</a></li>
+                <li><a href="/">Contato</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="centered-box">
+
+        <article class="lado-esquerdo">
+            <div class="mensagem">
+                <h1>Bem vindo ao simulador</h1>
+                <p>Para iniciar o processo, digite suas informações e clique em próximo</p>
+            </div>
+        </article>
+
+        <article class="lado-direito">
+            <section class="lista-info">
+                <div class="perguntas" id="div_pergunta">Quantos lotes a empresa produz no mês?</div>
+                <input id="input_resposta" placeholder="Digite o valor aqui">
+                <button onclick="proximaPergunta()" id="button_pergunta">
+                    Próximo
+                </button>
+            </section>
+
+            <section class="resultado">
+                <div id="div_resultado_calculo"></div>
+            </section>
+        </article>
+    </main>
+</body>
+</html>
+
+<script>
+    var qtdLotesMes
+    var valorLote
+    var valorManutencao
+    var tempoManutencao
+
+    var questaoAtual = 0
+
+    function proximaPergunta(){
+        var resposta = Number(input_resposta.value) // Armazena oque o usuario digitou em uma variavel
+        if(questaoAtual == 0){
+            qtdLotesMes = resposta // Salva a resposta na variavel certa
+            div_pergunta.innerHTML = `Qual o valor de cada lote?` // Muda a pergunta que aparece ao usuario
+        }
+        if(questaoAtual == 1){
+            valorLote = resposta
+            div_pergunta.innerHTML = `Qual o custo de manutenção por dia?`
+        }
+        if(questaoAtual == 2){
+            valorManutencao = resposta
+            div_pergunta.innerHTML = `Quanto tempo a maquina fica parada quando está em manutenção?(Dias)`
+        }
+        if(questaoAtual == 3){
+            tempoManutencao = resposta
+        }
+
+        input_resposta.value = '' // Limpa oque esta escrito no input
+        questaoAtual += 1 // Adiciona um a contagem de questões
+
+        if(questaoAtual == 3){ // Verifica se é a ultima questão, caso seja ele irá mudar o texto do botão e a função que ele chama quando clicado
+            button_pergunta.textContent = 'Calcular economia'
+            button_pergunta.onclick = calcCusto
+        }
+    }
+
+    function calcCusto(){
+        proximaPergunta()
+        var producaoMes = qtdLotesMes * valorLote // Calcula a produção mensal da empresa
+        var qtdLotesDia = qtdLotesMes / 30 // Calcula a produção diária da empresa
+        var lotesNaoProduzido = qtdLotesDia * (1 + tempoManutencao) // Calcula a quantidade de lotes que não irão ser produzidos enquanto a maquina estiver com defeito
+        var valorCusto = (lotesNaoProduzido * valorLote) + (valorManutencao * tempoManutencao) // Calcula o quanto de prejuizo a empresa terá em R$
+
+        var porcentagemCusto = (valorCusto / producaoMes) * 100 // Calcula quanto esse prejuizo representa para a empresa em %
+
+        document.querySelector('.lista-info').style.display = 'none' // Esconde a pergunta, o input e o botao da tela
+
+        div_resultado_calculo.innerHTML = `${valorCusto} e ${porcentagemCusto}%` // Mostra os resultados da conta
+    }
+
+</script>
