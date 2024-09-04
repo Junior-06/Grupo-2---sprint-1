@@ -12,10 +12,7 @@ Este projeto visa desenvolver uma solução integrada de monitoramento de umidad
 - [Justificativa](#justificativa)
 - [Escopo](#escopo)
 - [Requisitos](#requisitos)
-- [Instalação](#instalação)
-- [Como Usar](#como-usar)
 - [Contribuição](#contribuição)
-- [Licença](#licença)
 
 ## Contexto
 
