@@ -57,11 +57,3 @@ Para contribuir com este projeto:
 3. Faça as alterações necessárias e empacote com: (`git add .`)
 4. Coloque uma mensagem no commit com: (`git commit -m "nome_da_alteração"`)
 5. Envie suas alterações com: (`git push`)
-
-## Licença
-
-Este projeto está licenciado sob a Licença MIT - consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
-
----
-
-Este README pode ser ajustado conforme necessário para refletir detalhes específicos do seu projeto ou para adicionar mais informações conforme o desenvolvimento avança.
