@@ -22,7 +22,7 @@ Os sistemas pneumáticos são essenciais na automação industrial, especialment
 
 ## Objetivo
 
-Desenvolver e comercializar uma solução para monitoramento de umidade e temperatura em sistemas pneumáticos na indústria automotiva, visando a prevenção de falhas, redução de custos operacionais e aumento da segurança.
+Desenvolver uma solução para monitoramento de umidade e temperatura em sistemas pneumáticos na indústria automotiva, visando a prevenção de falhas, redução de custos operacionais e aumento da segurança.
 
 ## Justificativa
 
