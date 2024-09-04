@@ -24,30 +24,6 @@ Os sistemas pneumáticos são essenciais na automação industrial, especialment
 
 Desenvolver uma solução para monitoramento de umidade e temperatura em sistemas pneumáticos na indústria automotiva, visando a prevenção de falhas, redução de custos operacionais e aumento da segurança.
 
-## Justificativa
-
-A solução proposta oferece um retorno sobre o investimento (ROI) vantajoso, com potencial de economia significativa ao prevenir falhas críticas que poderiam resultar em altos custos de reparo e perda de produtividade.
-
-## Escopo
-
-O projeto inclui:
-1. **Instalação de Sensores:** Instalação dos sensores LM35 e DHT11 em sistemas pneumáticos.
-2. **Integração e Armazenamento de Dados:** Envio dos dados para uma API dedicada e armazenamento em um banco de dados centralizado.
-3. **Análise e Visualização de Dados:** Plataforma web para visualização de dados e emissão de alertas em caso de anomalias.
-4. **Gestão de Riscos e Tomada de Decisão:** Ferramentas para que os usuários possam tomar decisões rápidas com base em dados em tempo real.
-
-## Requisitos
-
-- **Configuração do Projeto no GitHub:** Integração contínua, histórico de commits, e versionamento.
-- **Documentação:** Contexto, justificativa, objetivo, premissas, restrições, entre outros.
-- **Protótipo do Site:** Desenvolvimento de protótipo em PowerPoint.
-- **Calculadora Financeira:** Página web em HTML, CSS e JavaScript para cálculos sobre a umidade relativa do ar e custos.
-- **Ferramenta de Gestão:** Uso do Trello para organização de tarefas.
-- **Banco de Dados MySQL:** Tabelas e scripts para inserção e consulta de dados.
-- **Instalação da IDE Arduino:** Configuração e testes do Arduino.
-- **Arquitetura do Arduino:** Montagem e testes dos sensores com o Arduino.
-- **VM Linux Local:** Criação de uma máquina virtual Linux para execução do projeto.
-
 ## Trello
 - **Plataforma de administração:** utilizamos a plataforma Trello para realizar a delegação de tarefas e administração de do que será feito, o que está sendo feito e quais já estão finzalizadas no link: https://trello.com/b/PTGc9AIz/projeto-de-pi-pneumatica
 
