@@ -49,12 +49,6 @@ O projeto inclui:
 - **Arquitetura do Arduino:** Montagem e testes dos sensores com o Arduino.
 - **VM Linux Local:** Criação de uma máquina virtual Linux para execução do projeto.
 
-## Como Usar
-
-- **Monitoramento:** Acesse a plataforma web para visualizar os dados em tempo real.
-- **Alertas:** Receba notificações em caso de variações críticas de umidade ou temperatura.
-- **Decisões:** Utilize os dados para tomar ações preventivas e evitar falhas no sistema.
-
 ## Contribuição
 
 Para contribuir com este projeto:
