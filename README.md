@@ -41,7 +41,7 @@ O projeto inclui:
 - **Configuração do Projeto no GitHub:** Integração contínua, histórico de commits, e versionamento.
 - **Documentação:** Contexto, justificativa, objetivo, premissas, restrições, entre outros.
 - **Protótipo do Site:** Desenvolvimento de protótipo em PowerPoint.
-- **Calculadora Financeira:** Página web em HTML, CSS e JavaScript para cálculos sobre a umidade relativa do ar.
+- **Calculadora Financeira:** Página web em HTML, CSS e JavaScript para cálculos sobre a umidade relativa do ar e custos.
 - **Ferramenta de Gestão:** Uso do Trello para organização de tarefas.
 - **Banco de Dados MySQL:** Tabelas e scripts para inserção e consulta de dados.
 - **Instalação da IDE Arduino:** Configuração e testes do Arduino.
