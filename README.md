@@ -12,6 +12,8 @@ Este projeto visa desenvolver uma solução integrada de monitoramento de umidad
 - [Justificativa](#justificativa)
 - [Escopo](#escopo)
 - [Requisitos](#requisitos)
+- [Trello](#trello)
+- [Contribuição](#documentação)
 - [Contribuição](#contribuição)
 
 ## Contexto
@@ -45,6 +47,12 @@ O projeto inclui:
 - **Instalação da IDE Arduino:** Configuração e testes do Arduino.
 - **Arquitetura do Arduino:** Montagem e testes dos sensores com o Arduino.
 - **VM Linux Local:** Criação de uma máquina virtual Linux para execução do projeto.
+
+## Trello
+- **Plataforma de administração:** utilizamos a plataforma Trello para realizar a delegação de tarefas e administração de do que será feito, o que está sendo feito e quais já estão finzalizadas no link: https://trello.com/b/PTGc9AIz/projeto-de-pi-pneumatica
+
+## Documentação
+A documentação do projeto pode ser acessada pelo compartilhamento do OneDrive pelo link: https://bandteccom-my.sharepoint.com/:w:/r/personal/gustavo_barbosa_sptech_school/_layouts/15/Doc.aspx?sourcedoc=%7B4050661F-C16A-44A1-806A-322FDE3CF160%7D&file=TI-Documentacao-Grupo2.docx&action=default&mobileredirect=true
 
 ## Contribuição
 
