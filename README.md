@@ -9,9 +9,6 @@ Este projeto visa desenvolver uma solução integrada de monitoramento de umidad
 ## Sumário
 - [Contexto](#contexto)
 - [Objetivo](#objetivo)
-- [Justificativa](#justificativa)
-- [Escopo](#escopo)
-- [Requisitos](#requisitos)
 - [Trello](#trello)
 - [Documentação](#documentação)
 - [Contribuição](#contribuição)
