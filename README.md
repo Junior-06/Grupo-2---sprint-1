@@ -6,13 +6,6 @@
 
 Este projeto visa desenvolver uma solução integrada de monitoramento de umidade e temperatura em sistemas pneumáticos, com foco na indústria automotiva. A solução utiliza sensores LM35 e DHT11 conectados a um Arduino para capturar dados ambientais em tempo real, que são armazenados em um banco de dados centralizado. Através de uma plataforma web, os dados são analisados e visualizados, permitindo a tomada de decisões rápidas e eficazes para evitar falhas operacionais e reduzir custos de manutenção.
 
-## Sumário
-- [Contexto](#contexto)
-- [Objetivo](#objetivo)
-- [Trello](#trello)
-- [Documentação](#documentação)
-- [Contribuição](#contribuição)
-
 ## Contexto
 
 Os sistemas pneumáticos são essenciais na automação industrial, especialmente na produção automotiva, onde a eficiência e segurança são cruciais. A umidade no ar comprimido pode causar danos significativos, como corrosão e falhas nos componentes, afetando a produção e aumentando os custos de manutenção. A solução proposta visa mitigar esses riscos através de monitoramento contínuo e análise em tempo real.
