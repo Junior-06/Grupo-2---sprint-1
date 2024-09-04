@@ -49,15 +49,6 @@ O projeto inclui:
 - **Arquitetura do Arduino:** Montagem e testes dos sensores com o Arduino.
 - **VM Linux Local:** Criação de uma máquina virtual Linux para execução do projeto.
 
-## Instalação
-
-1. Clone o repositório:
-    ```bash
-    git clone https://github.com/seu-usuario/seu-repositorio.git
-    ```
-2. Instale as dependências necessárias.
-3. Siga os passos para configurar a IDE do Arduino e o banco de dados MySQL.
-
 ## Como Usar
 
 - **Monitoramento:** Acesse a plataforma web para visualizar os dados em tempo real.
@@ -67,11 +58,11 @@ O projeto inclui:
 ## Contribuição
 
 Para contribuir com este projeto:
-1. Faça um fork do repositório.
-2. Crie uma branch para sua funcionalidade (`git checkout -b feature/nova-funcionalidade`).
-3. Faça commit das suas alterações (`git commit -m 'Adiciona nova funcionalidade'`).
-4. Envie para a branch principal (`git push origin feature/nova-funcionalidade`).
-5. Crie um Pull Request.
+1. Primeiro clone o repositório: (`git clone https://github.com/seu-usuario/seu-repositorio.git`)
+2. Todos os dias execute o comando para atualizar o repositório com: (`git pull`)
+3. Faça as alterações necessárias e empacote com: (`git add .`)
+4. Coloque uma mensagem no commit com: (`git commit -m "nome_da_alteração"`)
+5. Envie suas alterações com: (`git push`)
 
 ## Licença
 
