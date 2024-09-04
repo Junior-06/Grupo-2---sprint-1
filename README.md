@@ -52,7 +52,16 @@ O projeto inclui:
 - **Plataforma de administração:** utilizamos a plataforma Trello para realizar a delegação de tarefas e administração de do que será feito, o que está sendo feito e quais já estão finzalizadas no link: https://trello.com/b/PTGc9AIz/projeto-de-pi-pneumatica
 
 ## Documentação
-A documentação do projeto pode ser acessada pelo compartilhamento do OneDrive pelo link: https://bandteccom-my.sharepoint.com/:w:/r/personal/gustavo_barbosa_sptech_school/_layouts/15/Doc.aspx?sourcedoc=%7B4050661F-C16A-44A1-806A-322FDE3CF160%7D&file=TI-Documentacao-Grupo2.docx&action=default&mobileredirect=true
+Acesse pelo link: https://bandteccom-my.sharepoint.com/:w:/g/personal/gustavo_barbosa_sptech_school/ER9mUEBqwaFEgGoyL9488WAB_siFpVGfcYR4t2inq89OZw?e=3xh1Ts
+
+## Trello
+Acesse pelo link: https://trello.com/b/PTGc9AIz/projeto-de-pi-pneumatica
+
+## Planilha de requisitos (Backlog)
+Acesse pelo link: https://bandteccom-my.sharepoint.com/:x:/g/personal/gustavo_barbosa_sptech_school/EfJ47sNf4e1Nk77F6AUopFcByYEGsBd8ztA4cmJvXo1CIg?e=GBFPba
+
+## Relatório Arquitetura do Arduino
+Acesse pelo link: https://bandteccom-my.sharepoint.com/:w:/g/personal/gustavo_barbosa_sptech_school/EfDUeJiFwhVHiZE5SXYLIzEBb_COEaEBvE0bU561aitJ9w?e=69pZMN
 
 ## Contribuição
 
