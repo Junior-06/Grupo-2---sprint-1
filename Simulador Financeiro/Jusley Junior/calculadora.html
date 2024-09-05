@@ -42,18 +42,18 @@
         const N_maquinas = Number(maquinas.value)
         const economia_sensor = 0.35
         const N_frequencia = Number(frequencia.value)
-        const medio_manutencao = 5000
-        const medio_corretiva = 4000
+        const medio_manutencao = 1000
+        const medio_corretiva = 5000
         const valor_gasto = Valor_ma * N_maquinas
         var economizara = valor_gasto + (medio_corretiva * N_maquinas) 
+        var total_desc = economizara - valor_gasto  
         // manutenção preventiva 5000 a 15000, corretiva é de 15 a 50 mil
         
 
         if (N_frequencia > 2) {
-            const medio_manutencao = 10000
             const valor_gasto = Valor_ma * N_maquinas
             const valor_gasto_ano = valor_gasto * (12 / N_frequencia)           
-            var excedente = valor_gasto_ano - medio_manutencaox
+            var excedente = valor_gasto_ano - medio_manutencao
 
             resultado.innerHTML = `sua empresa esta gastando ${valor_gasto_ano} ao ano em manutenções, parece que você esta fazendo mais manutenções que a media em seus compressores 
             problemas causados pelo excesso de umidade e calor podem estar ocasionando isso, esta gastando R$${excedente}
@@ -61,10 +61,10 @@
         }
         else {
             const valor_gasto = Valor_ma * N_maquinas
-            var gasto_corretivo = medio_corretiva * N_maquinas
-            resultado.innerHTML = `sua empresa esta gastando R$${valor_gasto} ao ano em manutenções, parece que você não esta fazendo o numero de manutenções esperadas em seus compressores,
+            var gasto_final = total_desc - medio_corretiva
+            resultado.innerHTML = `sua empresa esta gastando R$${total_desc} ao ano em manutenções, parece que você não esta fazendo o numero de manutenções esperadas em seus compressores,
              problemas podem acontecer causados pelo excesso de umidade e calor no equipamento, podendo gerar gastos diretos
-            de mais R$${gasto_corretivo} ao ano.`
+            de mais R$${gasto_final} ao ano.`
 
         }
 
