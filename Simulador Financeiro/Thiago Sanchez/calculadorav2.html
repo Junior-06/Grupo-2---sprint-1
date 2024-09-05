@@ -4,35 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulador Financeira | Thiago Sanchez</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-
-        <nav>
-            <a class="logo" href="/">AirSense</a>
-            <ul class="nav-list">
-                <li><a href="/">Início</a></li>
-                <li><a href="/">Simulador Financeira</a></li>
-                <li><a href="/">Sobre</a></li>
-                <li><a href="/">Contato</a></li>
-            </ul>
-        </nav>
-
-    </header>
-
     <main class="centered-box">
 
         <article class="lado-esquerdo">
-            <div class="mensagem">
+            <div id="div_mensagem" class="mensagem">
                 <h1>Bem vindo ao simulador</h1>
                 <p>Para iniciar o processo, digite suas informações e clique em próximo</p>
             </div>
         </article>
 
         <article class="lado-direito">
-            <section class="lista-info">
+            <section class="lista-info" id="section_perguntas">
                 <div class="perguntas" id="div_pergunta">Quantos lotes a empresa produz no mês?</div>
                 <input id="input_resposta" placeholder="Digite o valor aqui">
                 <button onclick="proximaPergunta()" id="button_pergunta">
@@ -92,9 +76,24 @@
 
         var porcentagemCusto = (valorCusto / producaoMes) * 100 // Calcula quanto esse prejuizo representa para a empresa em %
 
-        document.querySelector('.lista-info').style.display = 'none' // Esconde a pergunta, o input e o botao da tela
+        // Esconde a pergunta, o input e o botao da tela
+        section_perguntas.style.display = 'none'
 
-        div_resultado_calculo.innerHTML = `${valorCusto} e ${porcentagemCusto}%` // Mostra os resultados da conta
+        div_mensagem.innerHTML = `<h1>Resultados</h1> Aqui está o resultado da sua simulação:`
+
+        div_resultado_calculo.innerHTML = `
+        <h1>Perda</h1>
+        De acordo com os dados que você informou, atualmente sua perda está sendo de ${porcentagemCusto.toFixed(2)}% por mês, oque equivale a ${valorCusto.toFixed(2)} em reias. <br> 
+
+        <h1>Como prevenir</h1> 
+        A melhor forma de prevenir problemas nos sistemas pneumáticos da sua empresa é contratando nossos sensores de temperatura e umidade. Com o monitoramento dos equipamentos, podemos ter uma prevenção de 50% das falhas mecanicas, um aumento na eficacia energética de 20% do sistema e também um aumento de 25% da vida util do compressor.
+
+        Resumindo, seus gastos com as maquinas poderiam ser reduzidos em no mínimo 73%, passando de R$${valorCusto.toFixed(2)} para R$${(valorCusto * 0.27).toFixed(2)}
+        ` // Mostra os resultados da conta
+
+        // 50% a menos de falhas
+        // Aumento de 20% da eficacia energética
+        // Aumento da vida util em 25%
     }
 
 </script>
