@@ -38,19 +38,20 @@ SensorUmidade int,
 SensorTemp int
 );
 
+drop table SensoresUser;
 desc sensoresuser;
 
 Insert into SensoresUSER VALUES 
-(default,'GustavoLindo@gmail.com', 'SPTECH', 3, 2 ,1);
+(default,'GustavoLindo@gmail.com', 'Pneumecânica', 3, 2 ,1);
 
 
 
 INSERT INTO SensoresUSER values
-(default, 'GustavoBarbosa@gmail.com', 'SPTECH', 4,2,2),
+(default, 'GustavoBarbosa@gmail.com', 'AirSense', 4,2,2),
 (default, 'ItsAMeLuigi@gmail.com', 'SPTECH', 1,0,1),
-(default, 'Thiagueira@gmail.com', 'SPTECH', 0,0,0),
-(default, 'JuninJusley@gmail.com', 'SPTECH', 4,2,2),
-(default, 'Aliosmar@gmail.com', 'SPTECH', 12,8,4);
+(default, 'Thiagueira@gmail.com', 'Prensamaquinas', 0,0,0),
+(default, 'JuninJusley@gmail.com', 'pneuTech', 4,2,2),
+(default, 'Aliosmar@gmail.com', 'HouseAir', 12,8,4);
 
 select * from SensoresUSER;
 -- Ao invés de email, podemos puxar pelo nome ou algum outro dado.
@@ -68,12 +69,29 @@ DtHorario datetime default current_timestamp -- Este comando pega a data em temp
 INSERT INTO DadosSensores values
 (default, 59.4,28.3, 'Setor 4', now()); -- é necessário colocar o now() para identificar no DtHorario.
 
-INSERT INTO DadosSensores values
+INSERT INTO DadosSensores values 
 (default, 98.2, 22.7 , 'Setor 6', now()),
 (default, 98.2, 30 , 'Setor 3', now()),
-(default, 98.2, 26.9, 'Setor 1', now()),
-(default, 68, 29.1 , 'Setor 2', now()); 
+(default, 98.2, 26.9, 'Setor 1', now());
+
+INSERT INTO DadosSensores values
+(default, 102.1, 26.9, 'Setor 1', now()),
+(default, 98.2, 26.9, 'Setor 5', now()),
+(default, 43, 20.5 , 'Setor 2', now()); 
+
+INSERT INTO DadosSensores values
+(default, 88, 29.1 , 'Setor 2', now()), 
+(default, 30.2, 12.1 , 'Setor 4', now()); 
+
+-- Os inserts foram separados para mostrar os horários diferentes em que foram inseridos.
 
 SELECT * FROM DadosSensores;
 
-DROP TABLE DadosSensores;
+SELECT * FROM DadosSensores 
+	where Setor like '%4';
+    
+SELECT * FROM DadosSensores 
+	where DadosUmidade >= 40 and DadosTemperatura < 30.5; 
+    
+SELECT * FROM DadosSensores 
+	where idRegistro in (1,4,2,6); 
