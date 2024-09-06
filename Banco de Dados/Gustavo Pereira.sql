@@ -57,7 +57,23 @@ select * from SensoresUSER;
 
 
 
+CREATE TABLE DadosSensores (
+idRegistro int primary key auto_increment,
+DadosUmidade float,
+DadosTemperatura float,
+Setor varchar(15),
+DtHorario datetime default current_timestamp
+);
 
+INSERT INTO DadosSensores values
+(default, 59.4,28.3, 'Setor 4', now());
 
+INSERT INTO DadosSensores values
+(default, 98.2, 22.7 , 'Setor 6', now()),
+(default, 98.2, 30 , 'Setor 3', now()),
+(default, 98.2, 26.9, 'Setor 1', now()),
+(default, 68, 29.1 , 'Setor 2', now()); 
 
+SELECT * FROM DadosSensores;
 
+DROP TABLE DadosSensores;
