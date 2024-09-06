@@ -56,17 +56,17 @@ select * from SensoresUSER;
 -- Ao invés de email, podemos puxar pelo nome ou algum outro dado.
 
 
-
+-- Tabela para captação dos dados dos sensores EM TEMPO REAL.
 CREATE TABLE DadosSensores (
 idRegistro int primary key auto_increment,
 DadosUmidade float,
 DadosTemperatura float,
 Setor varchar(15),
-DtHorario datetime default current_timestamp
-);
+DtHorario datetime default current_timestamp -- Este comando pega a data em tempo real, incluindo dia e também horário.
+); 
 
 INSERT INTO DadosSensores values
-(default, 59.4,28.3, 'Setor 4', now());
+(default, 59.4,28.3, 'Setor 4', now()); -- é necessário colocar o now() para identificar no DtHorario.
 
 INSERT INTO DadosSensores values
 (default, 98.2, 22.7 , 'Setor 6', now()),
