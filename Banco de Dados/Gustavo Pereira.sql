@@ -13,20 +13,20 @@ alter table cadastro add constraint chkConfirmar CHECK (ConfirmarSenha = Senha);
 
 desc cadastro;
 
+drop table cadastro;
 INSERT INTO cadastro VALUES
-(default, 'Gustavo', 'GustavoLindo@gmail.com', 'EuSouOBatman', 'EuSouOBatman', 'SPTECH');
-
-SELECT * FROM cadastro;
+(default, 'Gustavo', 'GustavoLindo@gmail.com', 'EuSouOBatman', 'EuSouOBatman', 'Pneumecânica');
 
 INSERT INTO cadastro VALUES
-(default, 'Gustavo Oliveira', 'GustavoBarbosa@gmail.com', 'Boladecanhao', 'Boladecanhao', 'SPTECH');
+(default, 'Gustavo Oliveira', 'GustavoBarbosa@gmail.com', 'Boladecanhao', 'Boladecanhao', 'AirSense');
 
 INSERT INTO cadastro VALUES
 (default, 'Luigi bros', 'ItsAMeLuigi@gmail.com', 'MarioBros', 'MarioBros', 'SPTECH'),
-(default, 'Thiago Italia', 'Thiagueira@gmail.com', 'Melhore', 'Melhore', 'SPTECH'),
-(default, 'Jusley Junior', 'JuninJusley@gmail.com', 'UMApratada', 'UMApratada', 'SPTECH'),
-(default, 'Ali Omar', 'Aliosmar@gmail.com', 'Alahu Akbar', 'Alahu Akbar', 'SPTECH');
+(default, 'Thiago Italia', 'Thiagueira@gmail.com', 'Melhore', 'Melhore', 'Prensamaquinas'),
+(default, 'Jusley Junior', 'JuninJusley@gmail.com', 'UMApratada', 'UMApratada', 'pneuTech'),
+(default, 'Ali Omar', 'Aliosmar@gmail.com', 'Alahu Akbar', 'Alahu Akbar', 'HouseAir');
 
+SELECT * FROM cadastro;
 
 -- Segunda tabela para mostrar os sensores que o usuário tem
 Create Table SensoresUser(
