@@ -16,9 +16,6 @@ ALTER TABLE cadastro ADD CONSTRAINT chkConfirmar CHECK(confirmarsenha = senha);
 
 DESC cadastro;
 
-INSERT INTO cadastro VALUES
-(default, 'Gustavo', 'GustavoLindo@gmail.com', 'EuSouOBatman', 'EuSouOBatman', 'SPTECH');
-
 SELECT * FROM cadastro;
 
 INSERT INTO cadastro VALUES
@@ -27,23 +24,23 @@ INSERT INTO cadastro VALUES
 (default, 'Jusley Junior', 'jusley@sptech.school', 'senha', 'senha', 'SPTECH'),
 (default, 'Ali Omar', 'ali@sptech.school', 'senha', 'senha', 'SPTECH');
 
--- Segunda tabela dados dos sensores
+-- Segunda tabela dados dos sensores em tempo real
 CREATE TABLE DadosSensores (
 idRegistro int primary key auto_increment,
 DadosUmidade float,
 DadosTemperatura float,
 Setor varchar(15),
-DtHorario datetime default current_timestamp
+DtHorario datetime default current_timestamp -- Este comando pega a data em tempo real, incluindo dia e também horário.
 );
 
 INSERT INTO DadosSensores values
-(default, 59.4,28.3, 'Setor 4', now());
+(default, 59.4,28.3, 'Setor 4', now()); -- é necessário colocar o now() para identificar no DtHorario.
 
 INSERT INTO DadosSensores values
 (default, 98.2, 22.7 , 'Setor 6', now()),
 (default, 98.2, 30 , 'Setor 3', now()),
 (default, 98.2, 26.9, 'Setor 1', now()),
-(default, 68, 29.1 , 'Setor 2', now()); 
+(default, 68, 29.1 , 'Setor 2', now());
 
 SELECT * FROM DadosSensores;
 
@@ -69,3 +66,13 @@ INSERT INTO SensoresUSER VALUES
 (default, 'alir@sptech.school', 'SPTECH', 12,8,4);
 
 SELECT * FROM SensoresUSER;
+
+SELECT * FROM SensoresUSER WHERE qtdSensores > 5;
+
+SELECT * FROM DadosSensores;
+
+SELECT * FROM DadosSensores WHERE DtHorario LIKE '2024-09-09%';
+
+SELECT * FROM DadosSensores WHERE DadosUmidade > 80;
+
+SELECT * FROM DadosSensores WHERE DadosTemperatura >= 30;
