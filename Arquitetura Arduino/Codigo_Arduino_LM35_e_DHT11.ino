@@ -21,9 +21,8 @@ void loop() {
   temperaturaCelsius = (valorLeitura * 5.0 / 1023.0) / 0.01; // Calculo da temperatura
 
   // Exibição do valor da temperatura 
-  Serial.print("Temperatura: ");
-  Serial.print(temperaturaCelsius);
-  Serial.println(" ºC");
+
+  // --------------------------------------------------------------------------------------------------------------
   
   // Verificação se o valor recebido pelo sensor é realmente um dado possível de se ler
   if(isnan(umidade)){
@@ -31,10 +30,10 @@ void loop() {
     Serial.println("Umidade: Erro ao ler os dados do sensor");
   } else {
     // Exibição da temperatura
-    Serial.print("Umidade: ");
-    Serial.print(umidade);
-    Serial.println("%");
+    Serial.print(temperaturaCelsius);
+    Serial.print(" ");
+    Serial.println(umidade);
   }
   // Adição de um delay entre cada amostragem
-  delay(2000);
+  delay(500);
 }
