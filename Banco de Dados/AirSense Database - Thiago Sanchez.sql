@@ -16,8 +16,7 @@ CREATE TABLE sensorDados(
     statusSensor varchar(30),
     temperatura FLOAT,
     umidade FLOAT,
-    horario datetime default current_timestamp,
-    localizacao varchar(40)
+    horario datetime default current_timestamp
 );
 
 CREATE TABLE valorMaximo(
@@ -26,6 +25,13 @@ CREATE TABLE valorMaximo(
     minTemp FLOAT,
     maxUmi FLOAT,
     minUmi FLOAT
+);
+
+CREATE TABLE infoSistema(
+	idSistema INT PRIMARY KEY AUTO_INCREMENT,
+    statusMaquina VARCHAR(15),
+    ultimoReparo DATE,
+    localizacao varchar(40)
 );
 
 INSERT INTO cadastro VALUES
@@ -41,16 +47,16 @@ INSERT INTO cadastro VALUES
 	(default, 'Hyundai', '(75) 99571-0614', 'contatoHyundai@hyundai.com', 'Xw202K9cn0a7');
     
 INSERT INTO sensorDados VALUES
-	(default, 'LM35', 'ligado', 28.5, 14.7, '2024-09-06 02:40:01', 'Setor A'),
-	(default, 'DHT11', 'ligado', 13.6, 16.9, '2024-09-06 06:20:25', 'Area HJ3'),
-	(default, 'LM35', 'desligado', 26.0, 12.2, '2024-09-05 19:33:52', 'Subsetor MP'),
-	(default, 'LM35', 'ligado', 11.7, 17.8, '2024-09-06 01:23:04', 'Setor X'),
-	(default, 'DHT11', 'desligado', 23.8, 12.8, '2024-09-05 19:43:45', 'Setor 3C'),
-	(default, 'DHT11', 'desligado', 12.2, 13.8, '2024-09-06 13:32:25', 'Subsetor KM09'),
-	(default, 'LM35', 'ligado', 17.0, 16.7, '2024-09-06 04:14:22', 'Setor T'),
-	(default, 'DHT11', 'ligado', 19.8, 10.4, '2024-09-05 18:33:15', 'Area GQ2I'),
-	(default, 'LM35', 'desligado', 13.2, 16.1, '2024-09-06 13:57:46', 'Setor FG'),
-	(default, 'DHT11', 'ligado', 29.2, 7.8, '2024-09-05 15:31:08', 'Setor IB');
+	(default, 'LM35', 'ligado', 28.5, 14.7, '2024-09-06 02:40:01'),
+	(default, 'DHT11', 'ligado', 13.6, 16.9, '2024-09-06 06:20:25'),
+	(default, 'LM35', 'desligado', 26.0, 12.2, '2024-09-05 19:33:52'),
+	(default, 'LM35', 'ligado', 11.7, 17.8, '2024-09-06 01:23:04'),
+	(default, 'DHT11', 'desligado', 23.8, 12.8, '2024-09-05 19:43:45'),
+	(default, 'DHT11', 'desligado', 12.2, 13.8, '2024-09-06 13:32:25'),
+	(default, 'LM35', 'ligado', 17.0, 16.7, '2024-09-06 04:14:22'),
+	(default, 'DHT11', 'ligado', 19.8, 10.4, '2024-09-05 18:33:15'),
+	(default, 'LM35', 'desligado', 13.2, 16.1, '2024-09-06 13:57:46'),
+	(default, 'DHT11', 'ligado', 29.2, 7.8, '2024-09-05 15:31:08');
     
 INSERT INTO valorMaximo VALUES
 	(default, 40.0, 12.5, 17.5, 5.0),
@@ -64,11 +70,32 @@ INSERT INTO valorMaximo VALUES
 	(default, 27.0, 13.2, 15.8, 4.3),
 	(default, 33.0, 9.0, 12.5, 4.5);
     
+INSERT INTO infoSistema VALUES
+	(default, 'ligado', '2024-05-28', 'Setor A'),
+	(default, 'desligado', '2024-08-06', 'Area HJ3'),
+	(default, 'ligado', '2024-05-08', 'Subsetor MP'),
+	(default, 'ligado', '2024-08-03', 'Setor X'),
+	(default, 'desligado', '2024-06-18', 'Setor 3C'),
+	(default, 'desligado', '2024-05-12', 'Subsetor KM09'),
+	(default, 'ligado', '2024-06-25', 'Setor T'),
+	(default, 'desligado', '2024-05-19', 'Area GQ2I'),
+	(default, 'ligado', '2024-07-28', 'Setor FG'),
+	(default, 'ligado', '2024-05-08', 'Setor IB');
+    
 select nome as Nome, telefone as Telefone, 
 email as Email, senha as Senha from cadastro;
 
-select tipoSensor as Sensor, statusSenor as 'Status', temperatura as Temperatura, 
-umidade as Umidade, horario as 'Data e hora', localizao as Localização from sensorDados;
+select tipoSensor as Sensor, statusSensor as 'Status do sensor', temperatura as Temperatura, 
+umidade as Umidade, horario as 'Data e hora' from sensorDados;
 
 select maxTemp as 'Temperatura máxima', minTemp as 'Temperatura mínima', 
 maxUmi as 'Umidade máxima', minUmi as 'Umidade mínima' from valorMaximo;
+
+select statusMaquina as 'Status da máquina', ultimoReparo as 'Data do ultimo reparo',
+localizacao as Localização from infoSistema;
+
+select * from sensorDados
+	where statusSensor = 'ligado';
+    
+select * from infoSistema
+	where localizacao like 'Setor%';
