@@ -20,8 +20,6 @@ void loop() {
   float umidade = sensorDHT.readHumidity(); // Armaenamento do dado da entrada analógica em uma variável
   temperaturaCelsius = (valorLeitura * 5.0 / 1023.0) / 0.01; // Calculo da temperatura
 
-  // Exibição do valor da temperatura 
-
   // --------------------------------------------------------------------------------------------------------------
   
   // Verificação se o valor recebido pelo sensor é realmente um dado possível de se ler
@@ -29,9 +27,20 @@ void loop() {
     // Exibição de uma mensagem de erro caso a leitura acabe não dando certo
     Serial.println("Umidade: Erro ao ler os dados do sensor");
   } else {
-    // Exibição da temperatura
+    // Exibição da temperatura e umidade
+    Serial.print("TempMáxima:");
+    Serial.print(100);
+    Serial.print(" ");
+    Serial.print("TempMinima:");
+    Serial.print(0);
+    Serial.print(" ");
+    Serial.print("Temperatura:");
     Serial.print(temperaturaCelsius);
     Serial.print(" ");
+    Serial.print("UmiMaxima:");
+    Serial.print("60");
+    Serial.print(" ");
+    Serial.print("Umidade:");
     Serial.println(umidade);
   }
   // Adição de um delay entre cada amostragem
