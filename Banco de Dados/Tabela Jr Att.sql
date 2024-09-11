@@ -3,8 +3,8 @@ create database air_sense;
 use air_sense;
 create table Dados_Sensor(
 id_teste int primary key auto_increment,
-Umidade varchar (200) not null,
-Temperatura varchar (200) not null,
+Umidade float,
+Temperatura  float,
 Horario_medição datetime default current_timestamp
 );
 
@@ -24,28 +24,25 @@ id int primary key auto_increment,
 Nome varchar (40) not null,
 email varchar (60) not null,
 telefone varchar (15),
-senha double,
-verificar_senha double
+senha double
 );
 
-alter table Cadastros add constraint chkSenha check(senha = verificar_senha);
-
 insert into Cadastros values
-(Null,"João Silva","joao.silva@gamail.com","11 91234-5678",123456,123456),
-(Null,"Maria Oliveira","maria.oliveira@gamail.com","21 92345-6789",123456,123456),
-(Null,"Carlos Pereira","carlos.pereira@gamail.com","31 93456-7890",123456,123456),
-(Null,"Ana Souza","ana.souza@gamail.com","41 94567-8901",123456,123456),
-(Null,"Lucas Fernandes","lucas.fernandes@gamail.com","51 95678-9012",123456,123456);
+(Null,"João Silva","joao.silva@gamail.com","11 91234-5678",123456),
+(Null,"Maria Oliveira","maria.oliveira@gamail.com","21 92345-6789",123456),
+(Null,"Carlos Pereira","carlos.pereira@gamail.com","31 93456-7890",123456),
+(Null,"Ana Souza","ana.souza@gamail.com","41 94567-8901",123456),
+(Null,"Lucas Fernandes","lucas.fernandes@gamail.com","51 95678-9012",123456);
 
 -- Terceira tabela 
 create table Monitoramento_sistemas(
 id_maquina int primary key auto_increment,
 status_maquina varchar (15),
 ultima_manutenção date,
-ultima_medição datetime
+ultima_medição datetime,
+constraint chkStatus check(status_maquina in("Operante","Inoperante"))
 );
 
-alter table Monitoramento_sistemas add constraint chkStatus check(status_maquina in("Operante","Inoperante"));
 
 insert into Monitoramento_sistemas values
 (null,'Operante', '2024-08-20', '2024-09-09 14:30:00'),
@@ -54,4 +51,6 @@ insert into Monitoramento_sistemas values
 (null,'Operante', '2024-06-22', '2024-09-07 16:20:00'),
 (null,'Inoperante', '2024-09-05', '2024-09-09 08:00:00');
 
-select * from Monitoramento_sistemas
+select * from Monitoramento_sistemas;
+
+select * from Dados_Sensor;
