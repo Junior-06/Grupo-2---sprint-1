@@ -79,16 +79,16 @@
         // Esconde a pergunta, o input e o botao da tela
         section_perguntas.innerHTML = ``
 
-        div_mensagem.innerHTML = `<h1>Resultados</h1> Aqui está o resultado da sua simulação: <br>Quantidade de lotes por mes: <strong>${qtdLotesMes}</strong> <br>Valor de cada lote: <strong>R$${valorLote.toFixed(2)}</strong> <br>Valor diário da manutenção: <strong>R$${valorManutencao.toFixed(2)}</strong> <br>Tempo de manutenção: <strong>${tempoManutencao}</strong> dias<hr>`
+        div_mensagem.innerHTML = `<h1>Resultados</h1> Aqui está o resultado da sua simulação: <br>Quantidade de lotes por mes: <strong>${qtdLotesMes}</strong> <br>Valor de cada lote: <strong>${valorLote.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}</strong> <br>Valor diário da manutenção: <strong>${valorManutencao.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}</strong> <br>Tempo de manutenção: <strong>${tempoManutencao}</strong> dias<hr>`
 
         div_resultado_calculo.innerHTML = `
         <h1>Perda</h1>
-        De acordo com os dados que você informou, atualmente sua perda está sendo de ${porcentagemCusto.toFixed(2)}% por mês, oque equivale a <strong>${valorCusto.toFixed(2)}</strong> em reais. <br> 
+        De acordo com os dados que você informou, atualmente sua perda está sendo de ${porcentagemCusto.toFixed(2)}% por mês, oque equivale a <strong>${valorCusto.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}</strong>. <br> 
 
         <h1>Como prevenir</h1> 
         A melhor forma de prevenir problemas nos sistemas pneumáticos da sua empresa é contratando nossos sensores de temperatura e umidade. Com o monitoramento dos equipamentos, podemos ter uma prevenção de 50% das falhas mecanicas, um aumento na eficacia energética de 20% do sistema e também um aumento de 25% da vida util do compressor.<br>
 
-        Resumindo, seus gastos com as maquinas poderiam ser reduzidos em no mínimo 73%, passando de <strong>R$${valorCusto.toFixed(2)}</strong> para <strong>R$${(valorCusto * 0.27).toFixed(2)}</strong>` // Mostra os resultados da conta
+        Resumindo, seus gastos com as maquinas poderiam ser reduzidos em no mínimo 73%, passando de <strong>R$${valorCusto.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}</strong> para <strong>${(valorCusto * 0.27).toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}</strong>` // Mostra os resultados da conta
 
         // 50% a menos de falhas
         // Aumento de 20% da eficacia energética

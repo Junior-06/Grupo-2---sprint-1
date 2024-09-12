@@ -1,6 +1,7 @@
 -- Primeira tabela
 create database air_sense;
 use air_sense;
+
 create table Dados_Sensor(
 id_teste int primary key auto_increment,
 Umidade float,
@@ -9,11 +10,11 @@ Horario_medição datetime default current_timestamp
 );
 
 insert into Dados_sensor value
-(null,"40%","39°",now()),
-(null,"10%","70°",now()),
-(null,"44%","45°",now()),
-(null,"50%","42°",now()),
-(null,"70%","44°",now());
+(null,"40","39°",now()),
+(null,"10","70°",now()),
+(null,"44","45°",now()),
+(null,"50","42°",now()),
+(null,"70","44°",now());
 
 select * from Dados_sensor;
 
@@ -53,4 +54,6 @@ insert into Monitoramento_sistemas values
 
 select * from Monitoramento_sistemas;
 
-select * from Dados_Sensor;
+select * from Dados_sensor;
+
+SELECT * FROM Dados_sensor WHERE Horario_medição = '2024-09-12';

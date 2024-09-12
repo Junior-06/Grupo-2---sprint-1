@@ -1,4 +1,4 @@
-#include "DHT.h" // Insere a biblioteca DHT.h no projeto
+#include "DHT.h"  // Insere a biblioteca DHT.h no projeto
 
 #define TIPO_SENSOR DHT11 // Define o tipo de sensor que será utilizado
 
